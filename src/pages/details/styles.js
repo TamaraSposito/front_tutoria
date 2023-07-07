@@ -10,28 +10,54 @@ export const Container = styled.div `
     "header"
     "content";
     
+    >main{
+        grid-area: content;
+        overflow-y: auto;
+        padding: 1rem 0;
+
+    }
 `;
 
 export const Content = styled.div `
-    width: 100%;
-    padding-bottom: 5.4rem;
+    margin:0 auto;
 
-    border-radius: 0.5rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: ${({theme}) => theme.COLORS.GRAY_PEWTER};
+    display:flex;
+    flex-direction: column;
 
-    strong {
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: ${({theme}) => theme.COLORS.GRAY};
-        margin-top: 2rem;
+    >button:first-child{
+        align-self: flex-end;
+        padding: 0 6rem;
     }
+
+    >div{
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 2px 3px 3px gray;
+        padding: 2.5rem 3.6rem 3.6rem 3.6rem;
+        margin: 5.5rem 2rem;
+        
+        >h1{
+            font-size: 3.6rem;
+            font-weight: 700;
+            color: ${({theme}) => theme.COLORS.GRAY_900};
+        }
+
+        >strong {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: ${({theme}) => theme.COLORS.GRAY};
+            margin-top: 2rem;
+        }
     
-    span {
+        >span {
             font-size: 1.4rem;
             font-weight: 700;
             color: ${({theme}) => theme.COLORS.GRAY};
             margin-top: 2rem;
+        }
+
+        >button:last-child{
+            margin-top: 2rem;
+        }
     }
-`;
+    `;

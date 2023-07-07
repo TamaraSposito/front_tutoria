@@ -5,7 +5,7 @@ export function Select({ icon: Icon, ...rest }) {
         <Container>
             <label>
                 Alunos
-                <select name="alunos">
+                <select name="alunos" {...rest}>
                     <option value="students.name">Tamara</option>
                     <option value="students.name">Carol</option>
                     <option value="students.name">Anne</option>
@@ -13,10 +13,6 @@ export function Select({ icon: Icon, ...rest }) {
                 </select>
             </label>
             {Icon && <Icon size={20} />}
-
-
         </Container>
-
     )
-
 }

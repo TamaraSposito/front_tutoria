@@ -13,11 +13,11 @@ export const Container = styled.div`
     border-radius: .5rem;
     margin-top: 1.6rem;
     
-    >input{
+    >textarea{
         width: 100%;
-        height: 5.6rem;
-        padding: 0 .7rem;
-        border:0;
+        height: 15rem;
+        padding: .5rem;
+        border: 0;
         
         background: transparent;
         color: ${({theme}) => theme.COLORS.GRAY_900};

@@ -10,7 +10,7 @@ export const Container = styled.button`
     border-radius: 5px;
     padding: 0 1.6rem;
     margin-top: 1.6rem;
-    font-weight: 900;
+    font-weight: 700;
 
     &:disabled{
         opacity:0.5;

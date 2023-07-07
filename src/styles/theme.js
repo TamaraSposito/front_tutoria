@@ -1,6 +1,6 @@
 export default {
     COLORS: {
-      BEIGE: "#E1D9CA",
+      BEIGE: "#F0ECE4",
       BEIGE_IVORY: "#EEEDE7",
 
       GRAY_PEWTER: "#B9B7BD",
@@ -10,5 +10,7 @@ export default {
 
       WHITE: "#F4EDE8",
       RED: "#FF002E",
+
+      TULIP: "#BEF9E3"
     }
   }
