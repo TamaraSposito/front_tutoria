@@ -6,14 +6,15 @@ export const Container = styled.button`
     color: ${({theme}) => theme.COLORS.BEIGE_IVORY};
 
     height: 5.6rem;
-    border:0;
-    border-radius: 5px;
+    border: .2rem solid;
+    border-color: ${({theme}) => theme.COLORS.LILAC};
+    border-radius: 10rem;
     padding: 0 1.6rem;
     margin-top: 1.6rem;
     font-weight: 700;
 
     &:disabled{
-        opacity:0.5;
+        opacity:0.8;
     }
 
 `;

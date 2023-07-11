@@ -10,17 +10,18 @@ export const Container = styled.div`
 
     border: 1px solid;
     border-color: ${({theme}) => theme.COLORS.GRAY_PEWTER};
-    border-radius: .5rem;
+    border-radius: 10rem;
     margin-top: 1.6rem;
     
     >input{
         width: 100%;
-        height: 5.6rem;
+        height: 5rem;
         padding: 0 .7rem;
         border:0;
         
         background: transparent;
         color: ${({theme}) => theme.COLORS.GRAY_900};
+        
 
         &:placeholder{
             color: ${({theme}) => theme.COLORS.GRAY};
@@ -28,7 +29,8 @@ export const Container = styled.div`
         }
 
         >svg{
-            margin-left: 1rem;
+            margin-left: 2rem;
+            color: ${({theme}) => theme.COLORS.PINK};            
         }
 
 `;

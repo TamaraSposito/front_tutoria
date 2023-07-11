@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.header `
     grid-area: header;
 
-    height: 10.5rem;
+    height: 8.5rem;
     width: 100%;
     
     border-bottom-width: 0.2rem;
@@ -15,11 +15,6 @@ export const Container = styled.header `
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-
-    /* display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas:
-    "image profile logout"; */
 
     background-color: ${({theme})=> theme.COLORS.GRAY_900};
     padding: 0 5rem;
@@ -45,12 +40,12 @@ export const Profile = styled.div `
         line-height: 2rem;
 
         span{
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: ${({theme}) => theme.COLORS.BEIGE_IVORY};
         }
 
         strong {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: ${({theme}) => theme.COLORS.TULIP}
          }
     }
@@ -64,8 +59,8 @@ export const Logout = styled.button `
     background: transparent;
 
      > svg {
-         color: ${({theme}) => theme.COLORS.BEIGE_IVORY};
-         font-size: 30px;
+         color: ${({theme}) => theme.COLORS.PINK};
+         font-size: 2rem;
          cursor: pointer;
 
          path {

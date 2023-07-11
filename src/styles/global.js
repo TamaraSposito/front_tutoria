@@ -11,7 +11,7 @@ export default createGlobalStyle`
         /*10px/16px = 0.625 * 100 = 62.5% === 1rem = 10px */
     }
     body {
-        background-color: ${({theme}) => theme.COLORS.BEIGE};
+        background-color: ${({theme}) => theme.COLORS.CYAN_LIGHT};
         color: ${({theme}) => theme.COLORS.GRAY_900};
 
         -webkit-font-smoothing: antialiased;
@@ -20,7 +20,7 @@ export default createGlobalStyle`
     }
     body, input, button, textarea {
         font-family: 'Roboto Slab', serif;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         outline: none;
     }
     a {
@@ -32,5 +32,10 @@ export default createGlobalStyle`
     }
     button:hover, a:hover {
         filter: brightness(.9);
+    }
+    h1{
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: ${({theme}) => theme.COLORS.GRAY_900};
     }
 `;

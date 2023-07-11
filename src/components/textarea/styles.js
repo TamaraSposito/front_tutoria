@@ -19,6 +19,7 @@ export const Container = styled.div`
         padding: .5rem;
         border: 0;
         
+        
         background: transparent;
         color: ${({theme}) => theme.COLORS.GRAY_900};
 
