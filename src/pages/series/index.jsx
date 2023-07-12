@@ -13,12 +13,12 @@ export function Series() {
             <MenuVertical />
             <main>
                 <Content>
-                    <div>
+                    <section>
                         <h1>Ano / Série</h1>
                         <Input title="ano-serie" placeholder="ano / série" icon={PiBookBold}/>
                         <Input title="ano escolar" placeholder="ano escolar" icon={PiCalendarBold}/>
                         <Button title="salvar" />
-                    </div>
+                    </section>
                 </Content>
             </main>
         </Container>

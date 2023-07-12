@@ -25,7 +25,7 @@ export function Header() {
 
             </Image>
 
-            <Profile>
+            <Profile to="/teacher">
                 <div>
                     <span>Bem-Vindo</span>
                     <strong>Tamara Gonçalves Sposito</strong>

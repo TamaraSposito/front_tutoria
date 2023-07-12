@@ -30,8 +30,8 @@ export const Form = styled.form`
 
     > h2 {
         font-size: 1.5rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
         color: ${({theme}) => theme.COLORS.YELLOW};
 
     }

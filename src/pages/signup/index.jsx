@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom'
+
 import { Background, Container, Form, PaperStar } from './styles';
 import { Input } from '../../components/input';
 import { Button } from '../../components/button';
+
 
 import { PiUserBold, PiLockSimpleBold, PiEnvelopeSimpleBold } from 'react-icons/pi';
 
@@ -12,7 +15,7 @@ export function SignUp(){
                 <h1>Tutoria</h1>
                 <p>Aplicação para salvar e gerenciar registros de tutoria</p>
 
-                <h2>Faça seu login</h2>
+                <h2>Faça seu cadastro</h2>
 
                 <Input
                     placeholder="Name"
@@ -33,11 +36,12 @@ export function SignUp(){
                     
                 />
 
-                <Button title="Cadastrar" />
+                <Button title="Cadastrar" /> 
+                
 
-                <a href="https://example.com">
+                <Link to="/">
                     Volte para o login
-                </a>
+                </Link>
 
             </Form>
             <Background/>

@@ -1,4 +1,6 @@
 
+import { Link } from 'react-router-dom';
+
 import { Background, Container, Form, PaperStar } from './styles';
 import { Input } from '../../components/input';
 import { Button } from '../../components/button';
@@ -28,12 +30,10 @@ export function SignIn(){
                     icon={PiLockSimpleBold}
                     // onChange={e => setPassword(e.target.value)}
                 />
-
                 <Button title="Entrar" />
+                
 
-                <a href="https://example.com">
-                    Criar conta
-                </a>
+                <Link to="/signup">Criar conta</Link>
 
             </Form>
             <Background/>

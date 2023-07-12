@@ -13,7 +13,7 @@ export function Students() {
             <MenuVertical />
             <main>
                 <Content>
-                    <div>
+                    <section>
                         <h1>Aluno</h1>
                         <Input title="nome" placeholder="nome" icon={PiStudentBold}/>
                         <Input title="responsável" placeholder="responsável" icon={PiUsersThreeBold}/>
@@ -23,7 +23,7 @@ export function Students() {
                         <Input title="ano / série" placeholder="ano / série" icon={PiBookBold}/>
 
                         <Button title="salvar" />
-                    </div>
+                    </section>
                 </Content>
             </main>
         </Container>

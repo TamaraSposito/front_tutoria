@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
     grid-area: menu;
@@ -6,42 +7,69 @@ export const Container = styled.div`
     width: 20rem;
     height: 100%;
 
-    background-color:  ${({theme}) => theme.COLORS.GRAY_900};
-    padding: 2.5rem 3.6rem;
-    margin: 0;
+    display: grid;
+    grid-template-rows: 8.5rem auto 8.5rem;
+    grid-template-areas:
+    "brand"
+    "menu"
+    "newRegister";
 
-    >div{
+    background-color:  ${({theme}) => theme.COLORS.GRAY_900};
+`;
+
+export const Brand = styled.div`
+    grid-area: brand;
+    height: 8.5rem;
+    margin: 2rem auto ;
+    
+    >h1{
+        font-size: 3rem;
+        color: ${({theme}) => theme.COLORS.LILAC};
         text-align: center;
-        height: 8.5rem;
-        >h1{
-            font-size: 3rem;
-            color: ${({theme}) => theme.COLORS.LILAC};
+    };
+
+`
+
+export const Menu = styled.div` 
+    grid-area: menu;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 3rem auto;
+
+    >a{
+        display: flex;
+        align-items: center;
+
+        text-decoration: none;
+        padding-bottom: 3rem;
+        color: ${({theme}) => theme.COLORS.CYAN};
+        gap: .7rem;
+
+        >svg{
+            font-size: 1.6rem;
+            color: ${({theme}) => theme.COLORS.PINK};
+            opacity: .8;
+            }
+    
+    &:hover{
+        color: ${({theme}) => theme.COLORS.TULIP};
         }
     }
+`;
+export const NewRegister = styled(Link)`
+    grid-area: newRegister;
 
-    >menu{
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+    background-color: ${({theme}) => theme.COLORS.YELLOW};
+    color: ${({theme}) => theme.COLORS.GRAY_900};
+    font-weight: 700;
 
-        >a{
-            display: flex;
-            align-items: center;
+    border: none;
 
-            text-decoration: none;
-            padding-bottom: 3rem;
-            color: ${({theme}) => theme.COLORS.CYAN};
-            gap: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            >svg{
-                font-size: 1.6rem;
-                color: ${({theme}) => theme.COLORS.PINK};
-                opacity: .8;
-            }
-        }
-        >a:hover{
-                color: ${({theme}) => theme.COLORS.TULIP};
-            }
-
-}
-`
+    gap: 0.5rem;
+`;

@@ -14,7 +14,7 @@ export function Teacher() {
             <MenuVertical />
             <main>
                 <Content>
-                    <div>
+                    <section>
                         <h1>Tutor</h1>
                         <Input title="nome" placeholder="Tamara Sposito" icon={PiUserBold}/>
                         <Input title="email" placeholder="tamara@mail.com" icon={PiEnvelopeSimpleBold}/>
@@ -23,7 +23,7 @@ export function Teacher() {
                         <Input title="nova senha" placeholder="nova senha" icon={PiLockSimpleBold}/>
 
                         <Button title="salvar" />
-                    </div>
+                    </section>
                 </Content>
             </main>
         </Container>

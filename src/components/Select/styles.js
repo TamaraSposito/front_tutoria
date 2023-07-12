@@ -10,31 +10,20 @@ export const Container = styled.div`
     color: ${({theme}) => theme.COLORS.GRAY};
     
     margin-top: 1.6rem;
-    height: 5.6rem;
+    height: 4rem;
 
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     border-width: 1px;
     border-style: solid;
     border-color: ${({theme}) => theme.COLORS.GRAY_PEWTER};
     padding: 0 .7rem;
 
-    >label{
-        width: 10%;
-        align-items: center;
+    >select{
+        width: 97%;
         padding: 0 .7rem;
-        
-        >select{
-            width: 80%;
-            padding: 0 .7rem;
-            border:none;
-            background: none;
-        
-            color: ${({theme}) => theme.COLORS.GRAY};
-        }
+        border: none;
+        background: none;
+
+        color: ${({theme}) => theme.COLORS.GRAY};
     }
-
-        >svg{
-            margin-left: 1rem;
-        }
-
 `;

@@ -1,4 +1,4 @@
-import { Container } from './style'
+import { Container, Brand, Menu, NewRegister } from './style'
 import { Link } from 'react-router-dom'
 
 import { PiPuzzlePieceBold, PiBookBold, PiUserBold, PiStudentBold,  PiChatsCircleBold} from 'react-icons/pi';
@@ -6,21 +6,21 @@ import { PiPuzzlePieceBold, PiBookBold, PiUserBold, PiStudentBold,  PiChatsCircl
 export function MenuVertical() {
     return (
         <Container>
-            <div>
+            <Brand>
                 <h1>Tutoria</h1>
-            </div>
-            <br />
-
-            <menu>
+            </Brand>
+            <Menu>
                 <h4>Cadastro</h4>
-                <Link to="/series" > <PiBookBold /> Cadastro Ano / Série </Link>
-                <Link to="/students" >  <PiStudentBold /> Cadastro aluno </Link>
-                <Link to="/teacher" > <PiUserBold /> Cadastro tutor </Link>
+                <Link to="/series" > <PiBookBold /> Ano / Série </Link>
+                <Link to="/students" >  <PiStudentBold /> Aluno </Link>
                 <br/>
-                <Link to="/tutoring" > <PiChatsCircleBold/> Registro de tutoria </Link>
+                <Link to="/" > <PiPuzzlePieceBold/> Sobre </Link>
+            </Menu>
 
-                <Link to="/home" > <PiPuzzlePieceBold/> Sobre </Link>
-            </menu>
+            <NewRegister to="/tutoring">
+                <PiChatsCircleBold/>
+                Registro
+            </NewRegister>
 
         </Container>
     );

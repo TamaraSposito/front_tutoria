@@ -10,26 +10,20 @@ export const Container = styled.div`
 
     border: 1px solid;
     border-color: ${({theme}) => theme.COLORS.GRAY_PEWTER};
-    border-radius: .5rem;
+    border-radius: 2rem;
     margin-top: 1.6rem;
     
     >textarea{
         width: 100%;
-        height: 15rem;
-        padding: .5rem;
+        height: 10rem;
+        padding: 1rem 1.7rem;
         border: 0;
-        
-        
+
         background: transparent;
         color: ${({theme}) => theme.COLORS.GRAY_900};
 
         &:placeholder{
             color: ${({theme}) => theme.COLORS.GRAY};
-                     }
+         }
         }
-
-        >svg{
-            margin-left: 1rem;
-        }
-
 `;

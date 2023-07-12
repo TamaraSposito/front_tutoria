@@ -15,7 +15,7 @@ export const Container = styled.div`
     
     >input{
         width: 100%;
-        height: 5rem;
+        height: 4rem;
         padding: 0 .7rem;
         border:0;
         
@@ -30,6 +30,7 @@ export const Container = styled.div`
 
         >svg{
             margin-left: 2rem;
+            width: 1.6rem;
             color: ${({theme}) => theme.COLORS.PINK};            
         }
 

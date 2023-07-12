@@ -11,8 +11,7 @@ export function Select({ icon: Icon, ...rest }) {
                     <option value="students.name">Carol</option>
                     <option value="students.name">Anne</option>
                     <option value="students.name">Kamilly</option>
-                </select>
-            
+                </select>            
         </Container>
     )
 }

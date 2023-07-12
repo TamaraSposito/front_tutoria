@@ -1,15 +1,11 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
 
-export const Container = styled.header `
+export const Container = styled.header`
     grid-area: header;
 
     height: 8.5rem;
     width: 100%;
-    
-    border-bottom-width: 0.2rem;
-    border-bottom-style: solid;
-    border-bottom-color: ${({theme}) => theme.COLORS.BEIGE_IVORY};
-    
     
     display: flex;
     flex-wrap: nowrap;
@@ -17,7 +13,7 @@ export const Container = styled.header `
     align-items: center;
 
     background-color: ${({theme})=> theme.COLORS.GRAY_900};
-    padding: 0 5rem;
+    padding: 0 2rem;
 `;
 export const Image = styled.svg`
     width: 64px;
@@ -26,9 +22,9 @@ export const Image = styled.svg`
     background: transparent;
 `;
 
-export const Profile = styled.div `
+export const Profile = styled(Link)`
     width: 90%;
-    padding: 0 1rem;
+    padding: 0 .5rem;
 
     display: flex;
     align-items: center;
