@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
-
 export const Container = styled.header`
     grid-area: header;
 
@@ -14,6 +13,24 @@ export const Container = styled.header`
 
     background-color: ${({theme})=> theme.COLORS.GRAY_900};
     padding: 0 2rem;
+  
+  .button {
+    width: 5%;
+    padding: 0 1rem;
+
+    border: none;
+    background: transparent;
+
+    > svg {
+      color: ${({theme}) => theme.COLORS.PINK};
+      font-size: 2rem;
+      cursor: pointer;
+
+      path {
+        cursor: pointer;
+      }
+    }
+  }
 `;
 export const Image = styled.svg`
     width: 64px;
@@ -45,22 +62,4 @@ export const Profile = styled(Link)`
             color: ${({theme}) => theme.COLORS.TULIP}
          }
     }
-`;
-
-export const Logout = styled.button `
-    width: 5%;
-    padding: 0 1rem;
-    
-    border: none;
-    background: transparent;
-
-     > svg {
-         color: ${({theme}) => theme.COLORS.PINK};
-         font-size: 2rem;
-         cursor: pointer;
-
-         path {
-             cursor: pointer;
-         }
-     }
 `;

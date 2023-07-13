@@ -1,7 +1,11 @@
-import { Container, Logout, Profile, Image } from "./styles"
+import React from 'react'
+import { Container, Profile, Image } from "./styles"
 import { RiShutDownLine } from "react-icons/ri"
+import {useAuthMethod, useAuthUser} from "../../hooks/authhooks.js";
 
 export function Header() {
+    const {  logout } = useAuthMethod()
+    const { user } = useAuthUser()
     return (
         <Container>
             <Image>
@@ -28,12 +32,12 @@ export function Header() {
             <Profile to="/teacher">
                 <div>
                     <span>Bem-Vindo</span>
-                    <strong>Tamara Gonçalves Sposito</strong>
+                    <strong>{user.displayName}</strong>
                 </div>
             </Profile>
-            <Logout>
+            <button onClick={logout} className="button" >
                 <RiShutDownLine />
-            </Logout>
+            </button>
         </Container>
     )
 };

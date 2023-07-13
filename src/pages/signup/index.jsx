@@ -1,16 +1,12 @@
 import { Link } from 'react-router-dom'
-
-import { Background, Container, Form, PaperStar } from './styles';
+import { Background, Container, PaperStar } from './styles';
 import { Input } from '../../components/input';
 import { Button } from '../../components/button';
-
-
 import { PiUserBold, PiLockSimpleBold, PiEnvelopeSimpleBold } from 'react-icons/pi';
-
 export function SignUp(){
     return (
         <Container>
-            <Form>
+            <form>
                 <PaperStar />
                 <h1>Tutoria</h1>
                 <p>Aplicação para salvar e visualizar registros de tutoria</p>
@@ -21,29 +17,29 @@ export function SignUp(){
                     placeholder="Nome"
                     type="text"
                     icon={PiUserBold}
-                    // onChange={e => setName(e.target.value)}
+                    name="name"
                 />
                 <Input
                     placeholder="E-mail"
                     type="text"
                     icon={PiEnvelopeSimpleBold}
-                    // onChange={e => setEmail(e.target.value)}
+                    name="email"
                 />
                 <Input
                     placeholder="Senha"
                     type="password"
                     icon={PiLockSimpleBold}
-                    
+                    name="password"
                 />
 
-                <Button title="Cadastrar" /> 
+                <Button type="submit" title="Cadastrar" />
                 
 
                 <Link to="/">
                     Volte para o login
                 </Link>
 
-            </Form>
+            </form>
             <Background/>
         </Container>
     )

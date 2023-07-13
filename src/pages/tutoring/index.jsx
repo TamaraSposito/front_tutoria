@@ -1,23 +1,23 @@
-// import {FiEdit, FiChevronsDown} from 'react-icons/fi'
 import { PiSquareFill } from "react-icons/pi";
-import { Container, Content } from './styles.js';
-
-import { Header } from '../../components/header';
-import { MenuVertical } from '../../components/menu';
+import { Content } from './styles.js';
 import { Textarea } from '../../components/textarea';
 import { Select } from '../../components/select';
 import { Button } from '../../components/button';
-
 export function Tutoring() {
     return (
-        <Container>
-            <Header />
-            <MenuVertical />
-            <main>
                 <Content>
                     <section>
                         <h1>Tutoria</h1>
-                        <Select />
+                        <Select data={[
+                            {
+                                id: 1,
+                                description: "teste"
+                            },
+                            {
+                                id: 2,
+                                description: "teste2"
+                            }
+                        ]} />
                         <Textarea placeholder="descrição" />
                         <Button title="salvar" />
                     </section>
@@ -29,7 +29,5 @@ export function Tutoring() {
                             <Button title="exportar excel" />
                     </section>
                 </Content>
-            </main>
-        </Container>
     )
 }
