@@ -14,7 +14,7 @@ export function SignIn(){
             <Form>
                 <PaperStar />
                 <h1>Tutoria</h1>
-                <p>Aplicação para salvar e gerenciar registros de tutoria</p>
+                <p>Aplicação para salvar e visualizar registros de tutoria</p>
 
                 <h2>Faça seu login</h2>
 

@@ -14,6 +14,7 @@
     "@mui/icons-material": "^5.13.7",
     "@mui/lab": "^5.0.0-alpha.135",
     "@mui/material": "^5.13.7",
+    "axios": "^1.4.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dimmer": "^1.0.7",

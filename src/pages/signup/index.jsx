@@ -13,12 +13,12 @@ export function SignUp(){
             <Form>
                 <PaperStar />
                 <h1>Tutoria</h1>
-                <p>Aplicação para salvar e gerenciar registros de tutoria</p>
+                <p>Aplicação para salvar e visualizar registros de tutoria</p>
 
-                <h2>Faça seu cadastro</h2>
+                <h2>Crie sua conta</h2>
 
                 <Input
-                    placeholder="Name"
+                    placeholder="Nome"
                     type="text"
                     icon={PiUserBold}
                     // onChange={e => setName(e.target.value)}
