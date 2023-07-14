@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Background, Container, PaperStar} from './styles';
 import { Input } from '../../components/input';
@@ -11,6 +11,7 @@ import {useSnackbar} from "notistack";
 export function SignIn() {
     const {  signInUser } = useAuthMethod()
     const {enqueueSnackbar} = useSnackbar();
+    const [ loading, setLoading] = useState(false);
 
     useEffect(() => {
         localStorage.removeItem('token');
@@ -21,8 +22,9 @@ export function SignIn() {
             password: 'admin@admin.com'
         },
         onSubmit: async (values) => {
+            setLoading(true)
                 const response = await signInUser(values)
-            console.log(response)
+            setLoading(false)
             if(response.error){
                 enqueueSnackbar(response.error, {variant: "error"})
             }
@@ -54,9 +56,7 @@ export function SignIn() {
                     value={formik.values.password}
                     onChange={formik.handleChange}
                 />
-                <Button type="submit" title="Entrar" />
-                
-
+                <Button type="submit" title="Entrar"  loading={loading}/>
                 <Link to="/signup">Criar conta</Link>
 
             </form>
