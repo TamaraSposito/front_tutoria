@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Background, Container, PaperStar} from './styles';
 import { Input } from '../../components/input';
@@ -11,6 +11,10 @@ import {useSnackbar} from "notistack";
 export function SignIn() {
     const {  signInUser } = useAuthMethod()
     const {enqueueSnackbar} = useSnackbar();
+
+    useEffect(() => {
+        localStorage.removeItem('token');
+    }, [])
     const formik = useFormik({
         initialValues: {
             mail: 'admin@admin.com',

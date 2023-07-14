@@ -5,7 +5,8 @@ export const useApi = async (route, type, body) =>{
     try {
         switch(type) {
             case 'get':
-                const responseGet = await api.get( route, body)
+                const path = body ? `${route}?${body}` : route;
+                const responseGet = await api.get( path )
                 return {
                     data: responseGet.data,
                     error: null

@@ -8,6 +8,8 @@ import {useEffect} from "react";
 import {Select} from "../../components/Select/index.jsx";
 import {useApi} from "../../hooks/apihooks.js";
 import {useSnackbar} from "notistack";
+import * as yup from "yup";
+import {Error} from "../../components/error/index.jsx";
 export function Students() {
     const initialState = {
         id: "-1",
@@ -16,12 +18,21 @@ export function Students() {
         sponsorMail: "",
         sponsorPhone: "",
         birthday: "",
-        roomId: "-1"
+        roomId: '-1'
     }
     const {enqueueSnackbar} = useSnackbar();
     const [rooms, setRooms] = useState([])
     const [students, setStudents] = useState([])
     const [select, setSelect] = useState(-1)
+    const validationSchema = yup.object({
+        roomId: yup.string().test('roomId', 'Selecione o ano / série', (value) => {
+            if(value == "-1") return false
+            return true
+        }),
+        name: yup.string().required("Nome Requerido")
+            .min(5, "Mínimo de 5 caracteres")
+            .max(200, "Máximo de 10 caracteres"),
+    })
     const getApi = async () =>{
         const responseRoom = await useApi('room', 'get')
         if(!responseRoom.error){
@@ -35,6 +46,7 @@ export function Students() {
         } else {
             enqueueSnackbar("Erro ao buscar os anos/séries", {variant: "error"});
         }
+
         const responseStudent = await useApi('student', 'get')
         if(!responseStudent.error){
             setStudents([
@@ -53,17 +65,21 @@ export function Students() {
     },[])
     const formik = useFormik({
         initialValues: initialState,
-        enableReinitialize: true,
+        validationSchema: validationSchema,
         onSubmit: async (values) => {
             const type = values.id === "-1" ?  "post" : "put";
             const response = await useApi('/student', type, values);
-            if(!response.error){
+            if(response.error){
+                enqueueSnackbar(response.error, {variant: "error"});
+            } else {
                 const message = type === "post" ? "Novo aluno salvo com sucesso" :
                     "Aluno atualizado sucesso";
                 enqueueSnackbar(message ,{variant: "success"});
+
+                if(type == "post")
+                    formik.setValues(initialState)
+
                 await getApi()
-            } else {
-                enqueueSnackbar(response.error, {variant: "error"});
             }
         }
     })
@@ -89,6 +105,7 @@ export function Students() {
                                value={formik.values.name}
                                onChange={formik.handleChange}
                         />
+                            { formik.errors.name && <Error message={formik.errors.name }/>}
                         <Input name="sponsor"
                                title="responsável"
                                placeholder="responsável"
@@ -121,12 +138,14 @@ export function Students() {
 
                         />
                             <Select
+                                name="roomId"
                                 icon={PiBookBold}
                                 data={rooms}
                                 title='description'
-                                onChange={ (e) => formik.setValues('roomId', e.target.value)}
+                                onChange={(e) => formik.setFieldValue("roomId", e.target.value)}
                                 value={formik.values.roomId}
                             />
+                            { formik.errors.roomId && <Error message={formik.errors.roomId }/>}
                         <Button type="submit" title="salvar" />
                         </form>
                     </section>
