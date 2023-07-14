@@ -11,12 +11,12 @@ import {useSnackbar} from "notistack";
 export function Series() {
     const initialState = { id: "-1", description: ""}
     const {enqueueSnackbar} = useSnackbar();
-    const [roomSelect, setRoomSelect] = useState([])
+    const [rooms, setRooms] = useState([])
     const [select, setSelect] = useState(-1)
     const getApi = async () =>{
         const response = await useApi('room', 'get')
         if(!response.error){
-            setRoomSelect([
+            setRooms([
                 {
                     id: '-1',
                     description: "Novo"
@@ -48,14 +48,16 @@ export function Series() {
     }, [])
     useEffect(() => {
       select == "-1" ? formik.setValues(initialState) :
-                       formik.setValues(roomSelect.find(x => x.id === select))
+                       formik.setValues(rooms.find(x => x.id === select))
     }, [select])
     return (
                 <Content>
                     <section>
                        <h1>Ano / Série</h1>
-                        <Select data={roomSelect}
-                        onChange={(e) => setSelect(e.target.value)}
+                        <Select
+                            data={rooms}
+                            title='description'
+                            onChange={(e) => setSelect(e.target.value)}
                         />
                         <form onSubmit={formik.handleSubmit}>
                         <Input

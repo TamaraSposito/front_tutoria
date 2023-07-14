@@ -16,6 +16,12 @@ export const useApi = async (route, type, body) =>{
                     data: responsePost.data,
                     error: null
                 }
+            case 'patch':
+                const responsePatch = await api.patch( `${route}/${body.id}`, body)
+                return {
+                    data: responsePatch.data,
+                    error: null
+                }
             case 'put':
                 const responsePut = await api.put(`${route}/${body.id}`, body)
                 return {
@@ -26,11 +32,12 @@ export const useApi = async (route, type, body) =>{
             await api.delete(route)
             default:
                 console.log('error')
+                break;
         }
     } catch(error) {
         return {
         data: null,
-         error: error.response.data.message ? error.response.data.message : error.message
+         error: error.response.data.message
         }
     }
 }
