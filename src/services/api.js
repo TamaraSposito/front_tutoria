@@ -5,7 +5,7 @@ const api = axios.create({
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
     },
-    baseURL: "http://localhost:3000/api"
+    baseURL: "http://143.198.72.61/api"
 });
 
 export const setAuthToken = (token) => {
