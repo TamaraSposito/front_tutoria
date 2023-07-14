@@ -5,7 +5,7 @@ const api = axios.create({
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
     },
-    baseURL: "http://143.198.72.61/api"
+    baseURL: "https://app.zorobadel.com/api"
 });
 
 export const setAuthToken = (token) => {
