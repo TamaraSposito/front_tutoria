@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "18.16.1"
+  },
   "name": "tutoria",
   "private": true,
   "version": "0.0.0",
