@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-export function Select({ data, title= '', icon: Icon, ...rest }) {
+export function Select({ data, title= '', icon: Icon, loading= false, ...rest }) {
     return (
         <Container>
             {Icon && <Icon size={20} />}
@@ -8,7 +8,7 @@ export function Select({ data, title= '', icon: Icon, ...rest }) {
                         data && data.map((x, index) => {
                          return <option value={x.id} key={index}>{
                              x[title]
-                             }</option>
+                             } </option> 
                         })
                     }
 

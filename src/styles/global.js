@@ -43,7 +43,7 @@ export default createGlobalStyle`
         background-color: white;
         border-radius: 20px;
         box-shadow: 2px 2px 3px ${({theme}) => theme.COLORS.LILAC};
-        padding: 2.5rem 3.6rem 3.6rem 3.6rem;
-        margin: 1.5rem 1.5rem;
+        padding: 2.5rem;
+        margin: auto 10rem;
     }
 `;

@@ -19,11 +19,17 @@ export const Container = styled.div`
     padding: 0 .7rem;
 
     >select{
-        width: 97%;
-        padding: 0 .7rem;
+        width: 95%;
+        padding: 0 .4rem;
         border: none;
         background: none;
 
         color: ${({theme}) => theme.COLORS.GRAY};
+    }
+    >svg{
+        margin-left: 1.5rem;
+        width: 1.6rem;
+        color: ${({theme}) => theme.COLORS.PINK};
+        
     }
 `;

@@ -7,7 +7,7 @@ export function Button({title, loading= false, disable = false, ...rest}){
         type="button"
         disabled={loading | disable}
         {...rest}>
-        { title } { loading && <ClipLoader loading= {loading} color= "#BEF9E3" size= {20} />}
+        { title } { loading && <ClipLoader loading= {loading} color= "#CA96E5" size= {20} />}
     </Container>
    
 </>

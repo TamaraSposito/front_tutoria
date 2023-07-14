@@ -27,9 +27,9 @@ export const Content = styled.div`
 
 
     >section{
-       
+       margin-bottom: 3rem;
         >p{
-            padding: 2rem 0;
+            padding: .875rem 0;
             text-align: justify;
             align-items: center;
 
@@ -48,6 +48,7 @@ export const Content = styled.div`
 
         >svg{
             height: 1rem;
+            color: ${({theme}) => theme.COLORS.GRAY};
         }
     }
 }

@@ -15,6 +15,7 @@ export function Series() {
     const {enqueueSnackbar} = useSnackbar();
     const [rooms, setRooms] = useState([])
     const [select, setSelect] = useState(-1)
+    const [loading, setLoading] = useState(false);
     const validationSchema = yup.object({
         description: yup.string().required("Ano/série Requerido")
             .min(3, "Mínimo de 3 caracteres")
@@ -39,9 +40,10 @@ export function Series() {
         validationSchema: validationSchema,
         enableReinitialize: true,
         onSubmit: async (values) => {
+            setLoading(true)
             const type = values.id === "-1" ?  "post" : "put";
             const response = await useApi('/room', type, values);
-
+            setLoading(false)
             if(response.error){
                 enqueueSnackbar(response.error, {variant: "error"});
             } else {
@@ -58,7 +60,7 @@ export function Series() {
     }, [])
 
     useEffect(() => {
-      select == "-1" ? formik.setValues(initialState) :
+        select == "-1" ? formik.setValues(initialState) :
                        formik.setValues(rooms.find(x => x.id === select))
     }, [select])
     return (
@@ -67,6 +69,7 @@ export function Series() {
                        <h1>Ano / Série</h1>
                         <form onSubmit={formik.handleSubmit}>
                         <Select
+                            icon={PiBookBold}
                             data={rooms}
                             title='description'
                             onChange={(e) => setSelect(e.target.value)}
@@ -81,7 +84,7 @@ export function Series() {
                             value={formik.values.description}
                         />
                         { formik.errors.description && <Error message={formik.errors.description }/> }
-                        <Button type="submit" title="salvar" />
+                        <Button type="submit" title="salvar" loading={loading} />
                         </form>
                     </section>
               </Content>

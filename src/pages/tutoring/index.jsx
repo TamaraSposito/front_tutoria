@@ -19,6 +19,7 @@ export function Tutoring() {
     const [students, setStudents] = useState([])
     const [ select, setSelect] = useState(-1)
     const [records, setRecords] = useState([])
+    const [ loading, setLoading] = useState(false);
     const validationSchema = yup.object({
         studentId: yup.string().test('opa', 'Selecione o estudante', (value) => {
             if(value == "-1") return false
@@ -60,7 +61,9 @@ export function Tutoring() {
         validationSchema: validationSchema,
         enableReinitialize: true,
         onSubmit: async (values) => {
+            setLoading(true)
             const response = await useApi('record', 'post', values)
+            setLoading(false)
             if(response.error){
                 enqueueSnackbar(response.error, {variant: "error"});
             } else {
@@ -101,7 +104,7 @@ export function Tutoring() {
                             onChange={formik.handleChange}
                         />
                             {formik.errors.description && <Error message={formik.errors.description} /> }
-                        <Button type="submit" title="salvar" />
+                        <Button type="submit" title="salvar" loading={loading} />
                         </form>
                     </section>
                         {records.length > 0 && (
@@ -113,7 +116,7 @@ export function Tutoring() {
                                         <span>{x.description}</span></p>
 
                                 ))}
-                            <Button title="exportar excel" />
+                            <Button title="exportar excel" loading={loading} />
                     </section>)
                         }
                 </Content>

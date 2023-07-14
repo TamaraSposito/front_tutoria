@@ -13,8 +13,14 @@ export const Container = styled.button`
     margin-top: 1.6rem;
     font-weight: 700;
 
-    &:disabled{
-        opacity:0.8;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    animation-duration: 2s;
 
+    &:disabled{
+        color: ${({theme}) => theme.COLORS.LILAC};
+        opacity:0.7;
+    }
 `;
