@@ -8,7 +8,7 @@ export function Select({ data, title= '', icon: Icon, loading= false, ...rest })
                         data && data.map((x, index) => {
                          return <option value={x.id} key={index}>{
                              x[title]
-                             } </option> 
+                             }  </option>
                         })
                     }
 

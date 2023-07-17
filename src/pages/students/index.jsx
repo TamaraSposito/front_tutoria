@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PiStudentBold, PiUsersThreeBold, PiEnvelopeSimpleBold, PiPhoneBold, PiCakeBold, PiBookBold } from 'react-icons/pi'
-import { Content } from './style'
+import { Content, Small } from './style'
 import { Input } from '../../components/input'
 import { Button } from '../../components/button'
 import { useFormik } from 'formik'
@@ -102,6 +102,7 @@ export function Students() {
                     data={students}
                     title='name'
                     onChange={(e) => setSelect(e.target.value)}
+                    loading={loading}
                 />
                 <form onSubmit={formik.handleSubmit}>
                     <Input name="name"
@@ -121,6 +122,7 @@ export function Students() {
                     />
                     <Input name="sponsorMail"
                         title="e-mail do responsável"
+                        type="email"
                         placeholder="e-mail do responsável"
                         icon={PiEnvelopeSimpleBold}
                         value={formik.values.sponsorMail}
@@ -129,10 +131,12 @@ export function Students() {
                     <Input name="sponsorPhone"
                         title="telefone o responsável"
                         placeholder="telefone do responsável"
+                        type="tel"
                         icon={PiPhoneBold}
                         value={formik.values.sponsorPhone}
                         onChange={formik.handleChange}
                     />
+                    <Small>formato necessário: 12-12345-1234</Small>
                     <Input name="birthday"
                         type="date"
                         title="data de nascimento"

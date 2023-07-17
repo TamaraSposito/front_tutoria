@@ -7,3 +7,10 @@ export const Content = styled.div`
     flex-direction: column;
 
     `;
+
+export const Small = styled.p`
+    font-size: 1.2rem;
+    color: ${({theme}) => theme.COLORS.GRAY};
+    padding-left: 3rem;
+    padding-top: .5rem;
+`;

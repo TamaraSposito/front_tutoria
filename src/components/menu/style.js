@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const Container = styled.div`
     grid-area: menu;
 
-    width: 20rem;
+    width: 100%;
     height: 100%;
 
     display: grid;

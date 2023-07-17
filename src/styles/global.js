@@ -29,7 +29,6 @@ export default createGlobalStyle`
     button, a{
         cursor: pointer;
         transition: filter .2s;
-        
     }
     button:hover, a:hover {
         filter: brightness(.9);
@@ -44,6 +43,6 @@ export default createGlobalStyle`
         border-radius: 20px;
         box-shadow: 2px 2px 3px ${({theme}) => theme.COLORS.LILAC};
         padding: 2.5rem;
-        margin: auto 10rem;
+        margin: auto 5vw;
     }
 `;

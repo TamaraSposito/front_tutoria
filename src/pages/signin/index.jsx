@@ -57,7 +57,6 @@ export function SignIn() {
                     onChange={formik.handleChange}
                 />
                 <Button type="submit" title="Entrar"  loading={loading}/>
-                <Link to="/signup">Criar conta</Link>
 
             </form>
             <Background/>

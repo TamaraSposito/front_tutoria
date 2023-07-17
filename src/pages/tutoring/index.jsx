@@ -1,4 +1,4 @@
-import { PiSquareFill } from "react-icons/pi";
+import { PiFilePdfBold, PiSquareFill } from "react-icons/pi";
 import { Content } from './styles.js';
 import { Textarea } from '../../components/textarea';
 import { Select } from '../../components/select';
@@ -10,6 +10,8 @@ import {useFormik} from "formik";
 import {Error} from "../../components/error/index.jsx";
 import * as yup from "yup";
 import _ from "lodash"
+import { Report } from "../report/report.jsx";
+
 export function Tutoring() {
     const initialState = {
         "studentId": "-1",
@@ -27,7 +29,7 @@ export function Tutoring() {
         }),
         description: yup.string().required("Descrição Requerida")
             .min(5, "Mínimo de 5 caracteres")
-            .max(200, "Máximo de 10 caracteres"),
+            .max(200, "Máximo de 200 caracteres"),
     })
    const getStudentsApi = async () =>{
         const responseStudent = await useApi('student', 'get')
@@ -116,7 +118,10 @@ export function Tutoring() {
                                         <span>{x.description}</span></p>
 
                                 ))}
-                            <Button title="exportar excel" loading={loading} />
+                            <Button 
+                                title="Gerar PDF" 
+                                loading={loading} 
+                                onClick={(e) => Report(students, records)} />
                     </section>)
                         }
                 </Content>
