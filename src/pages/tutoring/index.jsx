@@ -121,7 +121,7 @@ export function Tutoring() {
 
 
                     <Button
-                        title="Gerar Relatório PDFmake"
+                        title="Gerar Relatório"
                         loading={loading}
                         onClick={(e) => Report(students, records)} />
                 </section>)
