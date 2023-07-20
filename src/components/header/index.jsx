@@ -31,7 +31,7 @@ export function Header() {
 
             <Profile to="/teacher">
                 <div>
-                    <span>Bem-Vindo</span>
+                    <span>Bem-Vindo </span>
                     <strong>{user.displayName}</strong>
                 </div>
             </Profile>

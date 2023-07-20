@@ -17,11 +17,13 @@
     "@mui/icons-material": "^5.13.7",
     "@mui/lab": "^5.0.0-alpha.135",
     "@mui/material": "^5.13.7",
+    "@react-pdf/renderer": "^3.1.12",
     "axios": "^1.4.0",
     "formik": "^2.4.2",
     "lodash": "^4.17.21",
     "notistack": "^3.0.1",
     "pdfmake": "^0.2.7",
+    "pdfmake-unicode": "^0.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dimmer": "^1.0.7",
@@ -34,6 +36,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@types/pdfmake": "^0.2.2",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",

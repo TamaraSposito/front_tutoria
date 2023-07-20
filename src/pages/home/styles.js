@@ -4,7 +4,7 @@ export const Content = styled.div`
     padding: 0 3rem;
 
     >h1{
-      margin: 2.5rem 0;
+      margin: 2.5rem 0; 
 
     }
     >h3{

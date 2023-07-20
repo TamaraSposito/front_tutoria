@@ -20,10 +20,10 @@ export const Container = styled.div`
 export const Brand = styled.div`
     grid-area: brand;
     height: 8.5rem;
-    margin: 2rem auto ;
+    margin: 2.6rem auto ;
     
     >h1{
-        font-size: 3rem;
+        font-size: 2rem;
         color: ${({theme}) => theme.COLORS.LILAC};
         text-align: center;
     };

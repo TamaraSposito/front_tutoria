@@ -10,7 +10,7 @@ export function Select({ data, title= '', icon: Icon, loading= false, ...rest })
                              x[title]
                              }  </option>
                         })
-                    }
+                    } 
 
                 </select>
         </Container>

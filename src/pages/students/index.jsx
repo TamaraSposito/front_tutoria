@@ -136,7 +136,7 @@ export function Students() {
                         value={formik.values.sponsorPhone}
                         onChange={formik.handleChange}
                     />
-                    <Small>formato necessário: 12-12345-1234</Small>
+                    <Small>formato necessário: 12-12345-1234 </Small>
                     <Input name="birthday"
                         type="date"
                         title="data de nascimento"

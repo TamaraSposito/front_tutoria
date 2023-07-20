@@ -66,7 +66,7 @@ export function Series() {
     return (
                 <Content>
                     <section>
-                       <h1>Ano / Série</h1>
+                       <h1>Ano / Série </h1>
                         <form onSubmit={formik.handleSubmit}>
                         <Select
                             icon={PiBookBold}

@@ -48,7 +48,7 @@ export const Content = styled.div`
 
         >svg{
             height: 1rem;
-            color: ${({theme}) => theme.COLORS.GRAY};
+            color: ${({theme}) => theme.COLORS.GRAY}; 
         }
     }
 }

@@ -13,4 +13,4 @@ export const Small = styled.p`
     color: ${({theme}) => theme.COLORS.GRAY};
     padding-left: 3rem;
     padding-top: .5rem;
-`;
+`; 

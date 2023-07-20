@@ -1,6 +1,5 @@
-import pdfMake from 'pdfmake/build/pdfmake'
-import pdfFonts from "pdfmake/build/vfs_fonts";
-
+import * as pdfMake from 'pdfmake/build/pdfmake'
+import * as pdfFonts from "pdfmake/build/vfs_fonts";
 
 export function Report(students, records) {
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -14,6 +13,7 @@ export function Report(students, records) {
             color:'#CA96E5',
         }
     ];
+
 
     const details = records.map(x => {
         const studentName = students.find(y => y.id == x.studentId).name;
@@ -44,7 +44,7 @@ export function Report(students, records) {
 
 
         header: [reportTitle],
-        content: details,
+        content: [details],
         footer: Rodape,
     }
 

@@ -30,7 +30,7 @@ export const Container = styled.header`
         cursor: pointer;
       }
     }
-  }
+  } 
 `;
 export const Image = styled.svg`
     width: 64px;

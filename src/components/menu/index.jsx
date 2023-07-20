@@ -10,7 +10,7 @@ export function MenuVertical() {
                 <h1>Tutoria</h1>
             </Brand>
             <Menu>
-                <h4>Cadastro</h4>
+                <h4>Cadastro </h4>
                 <Link to="/series" > <PiBookBold /> Ano / Série </Link>
                 <Link to="/students" >  <PiStudentBold /> Aluno </Link>
                 <br/>

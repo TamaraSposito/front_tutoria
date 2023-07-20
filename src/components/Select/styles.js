@@ -30,6 +30,6 @@ export const Container = styled.div`
         margin-left: 1.5rem;
         width: 1.6rem;
         color: ${({theme}) => theme.COLORS.PINK};
-        
+         
     }
 `;

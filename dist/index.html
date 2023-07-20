@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet">
 
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tutoria</title>
-    <script type="module" crossorigin src="/assets/index-55b07f26.js"></script>
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-ebf4cd05.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAvtJREFUOE9tU11Ik1EYfs4535w5STMpUayJsx8cftsnlZjiRXUTEoWwsqQwb8IIA/u5qIuK6P+ioAhJKKjUfimou4jC6MfwGxPDv5Zi6aaG6XLNuX3nxBnNSnwvzsV7nvd53l+C+Y2pqpqxPG2JlRhEeMeHv3Z2dg4B4HPhZI6DOZ1OF6X0oBBC3eksS+DBMO71fYgIITwALum6/giAEY+bJSgoKLAoitJICHEBoAqluL3rMIQvgN0vGxDlMXH5PIxEIns7OjqC0hEnYIWFhU0AZHDM1i5bgasVteDeMRxoa8FHv3c2WSFEi67rVTKTGIGmaS5CSLNUjqPOlldjY54DRs8IXgYHcOx1E8TfejnnvMrtdjdLAlp+vPa9kZm2xpxiQWKqBUsTknF+JBcJzITRjFxEjSg++fsRmJpEYGoCgakAfCO+tgvXTxUTu92enZlv+1x0cl9CIHMRBo1pbPkM7OlTIAiBz5oPUAoIjnCQY3oyiuGxIVx9cjrcP9yXSxwORzFj7E3S4hSy8UQtMhwrYQlxWH0RLPMbSExPQqKlFzzyA1/aNmPgRw+uPTmDialxQQgplQTrGWOtsqGmBWaUHq6GbVNRrLv+n6lYN+3GBvMHCM7QdDcXDY9vIDwTkt0QhmGUEFVVsxhjXkKIWXqDWhnyj9WjOOUXusayoYgoDiXfgpX5cPS0G6/ejcRbORMOh21SSI7wrZyc/PG76vC92IVt6UASpUgXo9gZugj7UjOann7DlcaeGIEQ4qOu60WxMTqdzkpK6R0QQr1HGpFvW4080wzGXzzCZvIMVSVBmEwU3RNW1NS/hxDgQohKXdfvzy6Spml3jeTU7aFzj6GO9sJ35wpC/d0xtVU5iajbYcGq1ZnYur8bkz8jD9rb2ytnF0mC5CoLm3pzUU5exa/W51QY0f/ORGEE5WULee9g9IGna6Jm7irHwUzTtAoAhwghKgDTn3pnCCEezvllt9t9f95jmnOV1G63ZymKki3HK4QY8Hg8/n8D4/jfykA5D2J+vaIAAAAASUVORK5CYII=">
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
 
-  <body>
-    <div id="root"></div>
-    
-  </body>
+  <title>Tutoria</title>
+  <script type="module" crossorigin src="/assets/index-2e21c25e.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  
+</body>
+
 </html>

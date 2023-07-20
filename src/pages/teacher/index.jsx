@@ -41,7 +41,7 @@ export function Teacher() {
     return (
                 <Content>
                     <section>
-                        <h1>Tutor</h1>
+                        <h1>Tutor </h1>
                         <Input name="name"
                                title="nome"
                                placeholder={"Nome"}
