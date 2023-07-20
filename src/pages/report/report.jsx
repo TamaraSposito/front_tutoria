@@ -1,7 +1,8 @@
-import * as pdfMake from 'pdfmake/build/pdfmake'
 import * as pdfFonts from "pdfmake/build/vfs_fonts";
+import pdfMake from 'pdfmake'
 
 export function Report(students, records) {
+    pdfMake.vfs = pdfFonts.pdfMake.vfs;
     const reportTitle = [
         {
             text: 'Relatório de Tutoria',
@@ -46,22 +47,7 @@ export function Report(students, records) {
         footer: Rodape,
     }
 
-    pdfMake.createPdf(docDefinition, {},
-        {
-            Roboto: {
-              normal: 'Roboto-Regular.ttf',
-              bold: 'Roboto-Medium.ttf',
-              italics: 'Roboto-Italic.ttf',
-              bolditalics: 'Roboto-Italic.ttf'
-            },
-            TimesNewRoman: {
-              normal: 'Times-New-Roman-Regular.ttf',
-              bold: 'Times-New-Roman-Bold.ttf',
-              italics: 'Times-New-Roman-Italics.ttf',
-              bolditalics: 'Times-New-Roman-Italics.ttf'
-            }
-          },
-          pdfFonts.pdfMake.vfs).download();
+    pdfMake.createPdf(docDefinition).download();
 
     return
 };
