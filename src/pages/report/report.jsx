@@ -2,7 +2,7 @@ import * as pdfFonts from "pdfmake/build/vfs_fonts";
 import pdfMake from 'pdfmake'
 
 export function Report(students, records) {
-    pdfMake.vfs = pdfFonts.pdfMake.vfs;
+    pdfMake.vfs = pdfFonts && pdfFonts.pdfMake ? pdfFonts.pdfMake.vfs : globalThis.pdfMake.vfs;
     const reportTitle = [
         {
             text: 'Relatório de Tutoria',
