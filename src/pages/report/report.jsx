@@ -1,9 +1,9 @@
 import * as pdfMake from 'pdfmake/build/pdfmake'
 import * as pdfFonts from "pdfmake/build/vfs_fonts";
 
-export function Report(students, records) {
-    pdfMake.vfs = pdfFonts.pdfMake.vfs;
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
+export function Report(students, records) {
     const reportTitle = [
         {
             text: 'Relatório de Tutoria',
